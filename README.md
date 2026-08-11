@@ -15,7 +15,7 @@ A two-step audit built so the reviewer **cannot** silently rewrite your design. 
 ## Install
 
 ```bash
-/plugin marketplace add harshsmac/claude-design-tools
+/plugin marketplace add hds1422/design-tools-for-my-cute-wife
 /plugin install a11y@design-tools
 ```
 
