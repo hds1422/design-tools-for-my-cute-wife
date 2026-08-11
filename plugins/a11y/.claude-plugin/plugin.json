@@ -1,0 +1,8 @@
+{
+  "name": "a11y",
+  "description": "WCAG 2.2 AA accessibility auditor for UI prototypes and front-end code. Read-only audit agent that computes real contrast ratios and proposes diffs, plus an /a11y-fix command that applies approved findings.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Harsh"
+  }
+}
