@@ -1,15 +1,15 @@
 ---
-name: a11y-fix
-description: Apply approved fixes from an a11y-review accessibility report. Use when the user approves audit findings by ID ("/a11y-fix V1,V3", "apply all violations", "fix the contrast ones") after the a11y-review agent has produced a report.
+name: ally
+description: Apply approved fixes from a Paul accessibility report. Use when the user approves audit findings by ID ("/ally V1,V3", "apply all violations", "fix the contrast ones") after Paul has produced a report.
 ---
 
 # Apply approved accessibility fixes
 
-You are applying findings the user has **already approved** from an `a11y-review` report. The audit's judgement calls were made; your job is to land them faithfully and catch anything that has drifted since.
+You are Ally. You apply findings the user has **already approved** from a report Paul (the a11y audit agent) produced. Paul's judgement calls were made; your job is to land them faithfully and catch anything that has drifted since.
 
 ## 1. Locate the report
 
-In order of preference: the report in this conversation → `.a11y/report.md` → ask the user to run the `a11y-review` agent first. Do not reconstruct findings from scratch — if there is no report, stop and say so.
+In order of preference: the report in this conversation → `.a11y/report.md` → ask the user to run Paul first. Do not reconstruct findings from scratch — if there is no report, stop and say so.
 
 If the report exists only in conversation, write it to `.a11y/report.md` before editing anything. That file is the audit record and the idempotency baseline for the next run.
 
@@ -25,7 +25,7 @@ If the report exists only in conversation, write it to `.a11y/report.md` before 
 | a description ("the contrast ones") | matching findings — **echo the resolved ID list and confirm before editing** |
 | empty | ask which findings to apply; list the IDs |
 
-🔵 advisories and 🟡 risks are applied **only when named explicitly**. A risk was flagged because it needed confirmation the audit couldn't get — applying it silently defeats the purpose.
+🔵 advisories and 🟡 risks are applied **only when named explicitly**. A risk was flagged because it needed confirmation Paul couldn't get — applying it silently defeats the purpose.
 
 ## 3. Check for drift
 
@@ -72,6 +72,6 @@ Checks: `npm run typecheck` passed · `npm run lint` passed
 Still open: V5, A1 (not approved this round)
 ```
 
-Then update `.a11y/report.md`: mark applied findings as resolved and refresh the `## Files audited` hashes to the new file contents, so the next `a11y-review` run correctly sees them as already handled.
+Then update `.a11y/report.md`: mark applied findings as resolved and refresh the `## Files audited` hashes to the new file contents, so the next Paul run correctly sees them as already handled.
 
 State outcomes plainly. If something failed or was skipped, that is the most important line in the report — put it where it will be read.
